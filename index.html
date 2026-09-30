@@ -1,0 +1,70 @@
+---
+layout: default
+title: Viagens Personalizadas em Brasília
+---
+
+<!-- HERO COM IDEA VISUAL MARCANTE (SVG ANIMADO) -->
+<section class="hero">
+    <div class="hero-bg-svg">
+        <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+            <path class="route-line" d="M100,500 Q300,200 500,400 T900,100" />
+            <path class="route-line delay-1" d="M50,300 Q250,500 450,200 T850,400" />
+            <circle class="route-dot" cx="100" cy="500" r="6" />
+            <circle class="route-dot" cx="500" cy="400" r="6" />
+            <circle class="route-dot" cx="900" cy="100" r="6" />
+        </svg>
+    </div>
+    <div class="container hero-content">
+        <span class="kicker">Agência Boutique em {{ site.data.site.cidade }}</span>
+        <h1>Sua viagem começa com um<br>roteiro feito só para você.</h1>
+        <p class="hero-subtitle">Saia do Instagram. Tenha um planejador de viagens dedicado, atendimento humanizado e zero dor de cabeça.</p>
+        <a href="{{ site.data.site.acoes[0].link }}" class="btn-primary" target="_blank" rel="noopener">{{ site.data.site.acoes[0].texto }}</a>
+    </div>
+</section>
+
+<!-- SERVIÇOS EM CARTÕES COM SEQUÊNCIA -->
+<section id="servicos" class="section-servicos">
+    <div class="container">
+        <span class="kicker text-center">O Que Oferecemos</span>
+        <h2 class="text-center">Experiências sob medida</h2>
+        
+        <div class="grid-servicos">
+            {% for servico in site.data.site.servicos %}
+            <article class="card-servico" tabindex="0">
+                <div class="serv-icon">
+                    {% if servico.icone == 'map' %}
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                    {% elsif servico.icone == 'plane' %}
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    {% else %}
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    {% endif %}
+                </div>
+                <h3>{{ servico.titulo }}</h3>
+                <p>{{ servico.descricao }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- DIFERENCIAL TIPGRÁFICO FORTE -->
+<section id="diferencial" class="section-diferencial">
+    <div class="container text-center">
+        <h2 class="display-text">{{ site.data.site.diferencial }}</h2>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section-cta">
+    <div class="container text-center">
+        <h2>Pronto para viajar sem stress?</h2>
+        <p>Mande uma mensagem e receba um roteiro preliminar em até 24h.</p>
+        <a href="{{ site.data.site.acoes[1].link }}" class="btn-primary btn-large" target="_blank" rel="noopener">{{ site.data.site.acoes[1].texto }}</a>
+    </div>
+</section>
+
+<!-- BARRA FIXA MOBILE -->
+<div class="mobile-bar">
+    <a href="{{ site.data.site.acoes[0].link }}" target="_blank" rel="noopener">{{ site.data.site.acoes[0].texto }}</a>
+</div>

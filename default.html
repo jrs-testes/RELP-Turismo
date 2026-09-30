@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.data.site.nome }}</title>
+    <meta name="description" content="{{ site.description }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ page.title }} | {{ site.data.site.nome }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">{{ site.data.site.nome | split: ' ' | first }}</a>
+            <nav class="main-nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#diferencial">Diferencial</a>
+                <a href="{{ site.data.site.acoes[0].link }}" class="btn-nav" target="_blank" rel="noopener">{{ site.data.site.acoes[0].texto }}</a>
+            </nav>
+        </div>
+    </header>
+
+    {{ content }}
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.data.site.nome }}. Todos os direitos reservados.</p>
+            {% if site.data.site.instagram %}
+            <a href="https://instagram.com/{{ site.data.site.instagram }}" target="_blank" rel="noopener">@{{ site.data.site.instagram }}</a>
+            {% endif %}
+        </div>
+    </footer>
+
+    <!-- Dados para JS -->
+    <script type="application/json" id="site-data">{{ site.data.site | jsonify }}</script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

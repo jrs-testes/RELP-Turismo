@@ -1,0 +1,27 @@
+nome: RELP Turismo Personalizado
+cidade: Brasília
+bairro: Asa Sul
+whatsapp: "5561999998888"
+email: contato@relpturismo.com.br
+endereco: SHS Quadra 6, Bloco C, Sala 402 - Asa Sul, Brasília/DF
+horarios: Seg-Sex: 9h às 18h | Sáb: 9h às 13h
+instagram: relpturismo
+servico_prioritario: Roteiros Personalizados
+acoes:
+  - texto: Planejar Minha Viagem
+    link: https://wa.me/5561999998888?text=Olá!%20Gostaria%20de%20planejar%20uma%20viagem%20personalizada.
+  - texto: Falar no WhatsApp
+    link: https://wa.me/5561999998888
+servicos:
+  - titulo: Roteiros Personalizados
+    descricao: Planejamos cada detalhe da sua viagem sob medida, respeitando seu ritmo e interesses.
+    icone: map
+  - titulo: Passagens Aéreas
+    descricao: Emissão nacional e internacional com as melhores tarifas e suporte em imprevistos.
+    icone: plane
+  - titulo: Hospedagens Exclusivas
+    descricao: Parceria com hotéis e pousadas selecionadas para garantir conforto e experiência.
+    icone: bed
+diferencial: Atendimento 100% humano e digital. Sem robôs, sem filas, sem perda de tempo.
+depoimentos: [] # Vazio propositalmente para demonstrar ocultação via Liquid
+fotos: [] # Vazio para demonstrar fallback SVG
